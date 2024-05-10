@@ -21,7 +21,7 @@ def main():
         current_port = None
         forward_port = None
         try:
-            with open('/gluetun/forward_port') as fp:
+            with open('/gluetun/forwarded_port') as fp:
                 forward_port = int(fp.readlines()[0])
         except (ValueError, IndexError, FileNotFoundError) as e:
             print('Unable to find forward port')
