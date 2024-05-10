@@ -1,6 +1,6 @@
 services:
-  gluetun_qbittorent_port_manager:
-    image: gluetun_qbittorent_port_manager
+  qbittorrent_port_manager:
+    image: qbittorrent_port_manager
     build:
       context: .
       dockerfile: ./Dockerfile
