@@ -59,7 +59,7 @@ def main():
             print(e)
 
     
-        if forward_port and current_port_timestamp + timedelta(hours=24) < datetime.now():
+        if forward_port and current_port_timestamp + timedelta(hours=int(os.getenv('QBIT_PORT_FETCH_HOURS'))) < datetime.now():
            current_port_temp = get_listening_port()
            if current_port_temp:
                current_port = current_port_temp
@@ -70,7 +70,7 @@ def main():
                 set_new_port(port=forward_port)
         
 
-        sleep(600) # 300 seconds/5 minutes
+        sleep(round(float(os.getenv('PORT_CHECK_FREQUENCY_MINUTES'))*60, 0))
 
 if __name__ == '__main__':
     main()

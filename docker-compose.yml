@@ -9,5 +9,7 @@ services:
       - PORT=8080 # CHANGE_TO YOUR PORT
       - USERNAME=username # CHANGE TO YOUR USERNAME
       - PASSWORD=password # CHANGE TO YOUR PASSWORD
+      - QBIT_PORT_FETCH_HOURS=24 # How often will program query qbit for its current port
+      - PORT_CHECK_FREQUENCY_MINUTES=10 # How often will program check for new port
     volumes:
       - /home/:/gluetun
