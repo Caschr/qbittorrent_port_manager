@@ -59,7 +59,7 @@ def main():
         except:
             pass
 
-        sleep(300) # 300 minutes
+        sleep(300) # 300 seconds/5 minutes
 
 if __name__ == '__main__':
     main()
