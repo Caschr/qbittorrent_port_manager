@@ -1,0 +1,13 @@
+services:
+  qitbittorrentportupdate:
+    image: qitbittorrentportupdate
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - HOST=192.168.1.154
+      - PORT=8090 #CHANGE_TO_YOUR_GID
+      - USERNAME=username
+      - PASSWORD=password
+    volumes:
+      - /home/casper:/gluetun
