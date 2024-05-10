@@ -1,13 +1,13 @@
 services:
-  qitbittorrentportupdate:
-    image: qitbittorrentportupdate
+  gluetun_qbittorent_port_manager:
+    image: gluetun_qbittorent_port_manager
     build:
       context: .
       dockerfile: ./Dockerfile
     environment:
-      - HOST=192.168.1.154
-      - PORT=8090 #CHANGE_TO_YOUR_GID
-      - USERNAME=username
-      - PASSWORD=password
+      - HOST=192.168.1.1 # CHANGE TO YOUR HOST IP
+      - PORT=8080 # CHANGE_TO YOUR PORT
+      - USERNAME=username # CHANGE TO YOUR USERNAME
+      - PASSWORD=password # CHANGE TO YOUR PASSWORD
     volumes:
-      - /home/casper:/gluetun
+      - /home/:/gluetun
