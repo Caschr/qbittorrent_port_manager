@@ -67,7 +67,9 @@ def main():
             
         if current_port and forward_port:
             if current_port != forward_port:
-                set_new_port(port=forward_port)
+                successs = set_new_port(port=forward_port)
+                if successs:
+                    current_port = forward_port
         
 
         sleep(round(float(os.getenv('PORT_CHECK_FREQUENCY_MINUTES'))*60, 0))
