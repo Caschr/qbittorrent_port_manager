@@ -47,6 +47,7 @@ def set_new_port(port: int) -> bool:
         
 
 def main():
+    print('QBittorrent Port Manager: Service is running')
     current_port = get_listening_port()
     current_port_timestamp = datetime.now()
     while True:
